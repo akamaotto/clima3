@@ -5,10 +5,10 @@ import 'dart:async';
 import 'dart:convert';
 
 Future<WeatherInfo> fetchweather() async {
-  const String zipCode = "Abuja";
+  const String city = "Abuja";
   const String apiKey = "f6a7a655eb27c30a3bac0cf4c4ea69d4";
   const String requestURL =
-      "https://api.openweathermap.org/data/2.5/weather?q=$zipCode&appid=$apiKey";
+      "https://api.openweathermap.org/data/2.5/weather?q=$city&appid=$apiKey";
   final response = await http.get(Uri.parse(requestURL));
 
   if (response.statusCode == 200) {
