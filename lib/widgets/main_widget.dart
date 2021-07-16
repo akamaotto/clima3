@@ -40,7 +40,7 @@ class MainWidget extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
                 child: Text(
-                  temp.toInt().toString(),
+                  "${temp.toInt().toString()}°F",
                   style: const TextStyle(
                       color: Colors.purple,
                       fontSize: 80,
@@ -48,7 +48,7 @@ class MainWidget extends StatelessWidget {
                 ),
               ),
               Text(
-                "High of ${tempMax.toInt().toString()}°, Low of ${tempMin.toInt().toString()}°",
+                "High of ${tempMax.toInt().toString()}°F, Low of ${tempMin.toInt().toString()}°F",
                 style: const TextStyle(color: Color(0xFF9e9e9e)),
               )
             ],
@@ -62,7 +62,7 @@ class MainWidget extends StatelessWidget {
               WeatherTile(
                 icon: Icons.thermostat_outlined,
                 title: "Temperature",
-                subtitle: "${temp.toInt().toString()}°",
+                subtitle: "${temp.toInt().toString()}°F",
               ),
               WeatherTile(
                 icon: Icons.filter_drama_outlined,
